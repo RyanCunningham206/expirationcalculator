@@ -30,9 +30,18 @@ def calculate(request):
     global days
     global hours
     if request.method == 'POST':
-        weeks = request.POST.get('weeks')
-        days = request.POST.get('days')
-        hours = request.POST.get('hours')
+        if request.POST.get('weeks') == "":
+            weeks = 0
+        else:
+            weeks = request.POST.get('weeks')
+        if request.POST.get('days') == "":
+            days = 0
+        else:
+            days = request.POST.get('days')
+        if request.POST.get('hours') == "":
+            hours = 0
+        else:
+            hours = request.POST.get('hours')
     return redirect("/solution")
 
 def solution(request):

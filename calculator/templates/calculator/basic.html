@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title/>Freckles Calculator</title>
+</head>
+<body>
+<h1>Freckles' Calculator</h1>
+<div>
+    <div class="entry">
+        <form action="{% url 'calculate' %}" method="post">
+            {% csrf_token %}
+
+            <div>
+                <label for="weeks">Weeks</label>
+            </div>
+            <div class="entry-group">
+                <input type="number" class="form-control" placeholder="How many weeks?" weeks="weeks">
+            </div>
+
+            <div>
+                <label for="days">Days</label>
+            </div>
+            <div class="entry-group">
+                <input type="number" class="form-control" placeholder="How many days?" days="days">
+            </div>
+
+            <div>
+                <label for="hours">Hours</label>
+            </div>
+            <div class="entry-group">
+                <input type="number" class="form-control" placeholder="How many hours?" hours="hours">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Gimme dat date!</button>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

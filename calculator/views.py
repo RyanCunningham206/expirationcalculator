@@ -46,7 +46,6 @@ def calculate(request):
 
 def solution(request):
     global weeks
-    print(weeks)
     today = datetime.datetime.now()
     final_date = today + datetime.timedelta(weeks=int(weeks), days=int(days), hours=int(hours))
     print(final_date)
